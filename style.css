@@ -8,7 +8,7 @@ body {
     left: 20%;
     top: 50%;
     width: 120px;
-    animation: flappyAnimation 4s infinite;
+    animation: flappyAnimation 4s linear infinite;
   }
   .bird-container img{
     width: 100%;
@@ -16,22 +16,55 @@ body {
   
   @keyframes flappyAnimation {
     0%{
-      top: 20%;
-      left: 30%;
-      transform: rotate(-30deg)
+      top: 10%;
+      left: 0;
+      transform: rotate(30deg)
     }
+
+    10%{
+        top: 20%;
+        left: 10%;
+        transform: rotate(60deg)
+      }
   
-    60%{
+    30%{
+      transform: rotate(20deg);
+    }
+    40%{
       top: 60%;
       left: 20%;
-      transform: rotate(30deg);
       /* width: 240px; */
-    }
+    } 
+    
+    50%{
+        transform: rotate(-30deg);
+        /* width: 240px; */
+      }
   
-    100%{
-      left: 30%;
-      top: 20%;
-      transform: rotate(-30deg)
+    60%{
+      left: 60%;
+      top: 10%;
+      transform: rotate(30deg)
   
     }
+    80%{
+        left: 100%;
+        top: 60%;
+        transform: rotate(50deg)
+    
+      }
+
+      90%{
+        left: 100%;
+        top: 60%;
+        transform: rotate(-20deg)
+      }
+
+
+
+      100%{
+        left: 100%;
+        top: 60%;
+        transform: rotate(-20deg)
+      }
   }
